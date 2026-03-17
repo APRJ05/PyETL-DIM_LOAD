@@ -1,0 +1,88 @@
+2026-03-17 17:20:21 [INFO] main — =======================================================
+2026-03-17 17:20:21 [INFO] main — INICIO DEL PIPELINE: 2026-03-17 17:20:21
+2026-03-17 17:20:21 [INFO] main — =======================================================
+2026-03-17 17:20:21 [INFO] etl.extractor — =======================================================
+2026-03-17 17:20:21 [INFO] etl.extractor — PASO 1 — EXTRACCIÓN
+2026-03-17 17:20:21 [INFO] etl.extractor — =======================================================
+2026-03-17 17:20:21 [INFO] etl.extractor —   ⏱  read Clientes.csv              0.0002s
+2026-03-17 17:20:21 [ERROR] etl.extractor —   🔴 Archivo no encontrado: C:\Users\Andrea\Desktop\Clase\8vo Cuatri\Electiva 1 - Big Data\E - ETL\PyETL\data\Clientes.csv
+2026-03-17 17:20:21 [CRITICAL] main — Pipeline terminado con error: [Errno 2] No such file or directory: 'C:\\Users\\Andrea\\Desktop\\Clase\\8vo Cuatri\\Electiva 1 - Big Data\\E - ETL\\PyETL\\data\\Clientes.csv'
+2026-03-17 17:20:21 [INFO] main — Fin: 2026-03-17 17:20:21  |  Duración total: 0:00:00.000900
+2026-03-17 17:20:21 [INFO] main — =======================================================
+2026-03-17 17:20:21 [INFO] main — MÉTRICAS DE EJECUCIÓN
+2026-03-17 17:20:21 [INFO] main — =======================================================
+2026-03-17 17:20:21 [INFO] main — =======================================================
+2026-03-17 17:21:12 [INFO] main — =======================================================
+2026-03-17 17:21:12 [INFO] main — INICIO DEL PIPELINE: 2026-03-17 17:21:12
+2026-03-17 17:21:12 [INFO] main — =======================================================
+2026-03-17 17:21:12 [INFO] etl.extractor — =======================================================
+2026-03-17 17:21:12 [INFO] etl.extractor — PASO 1 — EXTRACCIÓN
+2026-03-17 17:21:12 [INFO] etl.extractor — =======================================================
+2026-03-17 17:21:12 [INFO] etl.extractor —   ⏱  read Clientes.csv              0.0044s
+2026-03-17 17:21:12 [INFO] etl.extractor —   ✓ Clientes.csv                 →   500 filas, 3 columnas
+2026-03-17 17:21:12 [INFO] etl.extractor —   ⏱  read Productos.csv             0.0007s
+2026-03-17 17:21:12 [INFO] etl.extractor —   ✓ Productos.csv                →   200 filas, 3 columnas
+2026-03-17 17:21:12 [INFO] etl.extractor —   ⏱  read Fuentes.csv               0.0005s
+2026-03-17 17:21:12 [INFO] etl.extractor —   ✓ Fuentes.csv                  →   100 filas, 3 columnas
+2026-03-17 17:21:12 [INFO] etl.extractor —   ⏱  read Survey.csv                0.0014s
+2026-03-17 17:21:12 [INFO] etl.extractor —   ✓ Survey.csv                   →   500 filas, 8 columnas
+2026-03-17 17:21:12 [INFO] etl.extractor —   ⏱  read SocialComments.csv        0.0009s
+2026-03-17 17:21:12 [INFO] etl.extractor —   ✓ SocialComments.csv           →   200 filas, 6 columnas
+2026-03-17 17:21:12 [INFO] etl.extractor —   ⏱  read WebReviews.csv            0.0007s
+2026-03-17 17:21:12 [INFO] etl.extractor —   ✓ WebReviews.csv               →   200 filas, 6 columnas
+2026-03-17 17:21:12 [INFO] etl.extractor —   Total archivos leídos: 6
+2026-03-17 17:21:12 [INFO] etl.extractor —   Total filas extraídas: 1700
+2026-03-17 17:21:12 [INFO] etl.extractor —   ✓ 'clientes' — estructura válida
+2026-03-17 17:21:12 [INFO] etl.extractor —   ✓ 'productos' — estructura válida
+2026-03-17 17:21:12 [INFO] etl.extractor —   ✓ 'fuentes' — estructura válida
+2026-03-17 17:21:12 [INFO] etl.extractor —   ✓ 'survey' — estructura válida
+2026-03-17 17:21:12 [INFO] etl.extractor —   ✓ 'social' — estructura válida
+2026-03-17 17:21:12 [INFO] etl.extractor —   ✓ 'webreviews' — estructura válida
+2026-03-17 17:21:12 [INFO] etl.transformer — =======================================================
+2026-03-17 17:21:12 [INFO] etl.transformer — PASO 2 — TRANSFORMACIÓN Y LIMPIEZA
+2026-03-17 17:21:12 [INFO] etl.transformer — =======================================================
+2026-03-17 17:21:12 [INFO] etl.transformer —   Clientes:            500 → 500 filas limpias
+2026-03-17 17:21:12 [INFO] etl.transformer —   Productos:           200 → 200 filas limpias
+2026-03-17 17:21:12 [INFO] etl.transformer —   Fuentes:             100 → 100 filas limpias
+2026-03-17 17:21:12 [INFO] etl.transformer —   Survey:              500 → 500 filas limpias
+2026-03-17 17:21:12 [INFO] etl.transformer —   SocialComments:      200 → 112 filas limpias  (88 descartadas)
+2026-03-17 17:21:12 [INFO] etl.transformer —   WebReviews:          200 → 200 filas limpias
+2026-03-17 17:21:12 [INFO] etl.loader — =======================================================
+2026-03-17 17:21:12 [INFO] etl.loader — PASO 3 — CARGA EN BASE DE DATOS
+2026-03-17 17:21:12 [INFO] etl.loader — =======================================================
+2026-03-17 17:21:12 [INFO] etl.loader —   ✓ Categorias           5 registros
+2026-03-17 17:21:12 [INFO] etl.loader —   ✓ Fuentes              7 registros
+2026-03-17 17:21:12 [INFO] etl.loader —   ✓ Rating               5 registros (1-5)
+2026-03-17 17:21:12 [INFO] etl.loader —   ✓ Clientes             500 registros
+2026-03-17 17:21:12 [INFO] etl.loader —   ✓ Producto             200 registros
+2026-03-17 17:21:12 [INFO] etl.loader —   ✓ Comentarios          45 registros
+2026-03-17 17:21:12 [INFO] etl.loader —   ✓ Survey               500 registros insertados
+2026-03-17 17:21:12 [INFO] etl.loader —   ✓ SocialComments       112 registros insertados
+2026-03-17 17:21:12 [INFO] etl.loader —   ✓ WebReviews           200 registros insertados
+2026-03-17 17:21:12 [INFO] etl.loader — =======================================================
+2026-03-17 17:21:12 [INFO] etl.loader — ✅  PIPELINE COMPLETADO EXITOSAMENTE
+2026-03-17 17:21:12 [INFO] etl.loader — =======================================================
+2026-03-17 17:21:12 [INFO] etl.loader_star — =======================================================
+2026-03-17 17:21:12 [INFO] etl.loader_star — PASO 4 — CARGA MODELO ANALÍTICO (OpClientes_DW)
+2026-03-17 17:21:12 [INFO] etl.loader_star — =======================================================
+2026-03-17 17:21:13 [INFO] etl.loader_star —   ✓ DIM_Fecha              315 registros
+2026-03-17 17:21:13 [INFO] etl.loader_star —   ✓ DIM_Cliente            500 registros
+2026-03-17 17:21:13 [INFO] etl.loader_star —   ✓ DIM_Producto           200 registros
+2026-03-17 17:21:13 [INFO] etl.loader_star —   ✓ DIM_Fuente             7 registros
+2026-03-17 17:21:13 [INFO] etl.loader_star —   ✓ DIM_Rating             5 registros
+2026-03-17 17:21:13 [INFO] etl.loader_star —   ✓ FACT_Opiniones [Survey      ] 500 registros
+2026-03-17 17:21:13 [INFO] etl.loader_star —   ✓ FACT_Opiniones [Social      ] 112 registros
+2026-03-17 17:21:13 [INFO] etl.loader_star —   ✓ FACT_Opiniones [WebReview   ] 200 registros
+2026-03-17 17:21:13 [INFO] etl.loader_star —   ✓ FACT_Opiniones TOTAL   812 registros
+2026-03-17 17:21:13 [INFO] etl.loader_star — =======================================================
+2026-03-17 17:21:13 [INFO] etl.loader_star — ✅  OpClientes_DW CARGADO EXITOSAMENTE
+2026-03-17 17:21:13 [INFO] etl.loader_star — =======================================================
+2026-03-17 17:21:13 [INFO] main — Fin: 2026-03-17 17:21:13  |  Duración total: 0:00:00.974287
+2026-03-17 17:21:13 [INFO] main — =======================================================
+2026-03-17 17:21:13 [INFO] main — MÉTRICAS DE EJECUCIÓN
+2026-03-17 17:21:13 [INFO] main — =======================================================
+2026-03-17 17:21:13 [INFO] main —   1-Extraccion           0.0097s  |  registros=1700  errores=0  reintentos=0
+2026-03-17 17:21:13 [INFO] main —   2-Transformacion       0.0271s  |  registros=1612  errores=0  reintentos=0
+2026-03-17 17:21:13 [INFO] main —   3-Carga-OLTP           0.4944s  |  registros=0  errores=0  reintentos=0
+2026-03-17 17:21:13 [INFO] main —   4-Carga-OLAP           0.4428s  |  registros=0  errores=0  reintentos=0
+2026-03-17 17:21:13 [INFO] main — =======================================================

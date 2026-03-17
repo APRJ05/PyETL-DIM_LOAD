@@ -1,0 +1,43 @@
+{
+  "database": {
+    "oltp": {
+      "server": "DESKTOP-N638G5Q\\SQLSERVERITLA",
+      "database": "OpClientes",
+      "windows_auth": true,
+      "sql_user": "",
+      "sql_pass": ""
+    },
+    "olap": {
+      "server": "DESKTOP-N638G5Q\\SQLSERVERITLA",
+      "database": "OpClientes_DW",
+      "windows_auth": true,
+      "sql_user": "",
+      "sql_pass": ""
+    }
+  },
+  "extraction": {
+    "csv_dir": "data",
+    "retry_attempts": 3,
+    "retry_delay_seconds": 2,
+    "files": {
+      "clientes":   "Clientes.csv",
+      "productos":  "Productos.csv",
+      "fuentes":    "Fuentes.csv",
+      "survey":     "Survey.csv",
+      "social":     "SocialComments.csv",
+      "webreviews": "WebReviews.csv"
+    },
+    "expected_columns": {
+      "clientes":   ["IdCliente", "Nombre", "Email"],
+      "productos":  ["IdProducto", "Nombre"],
+      "fuentes":    ["IdFuente", "TipoFuente", "FechaCarga"],
+      "survey":     ["IdOpinion", "IdCliente", "IdProducto", "Fecha", "PuntajeSatisfacción"],
+      "social":     ["IdComment", "IdCliente", "IdProducto", "Fecha"],
+      "webreviews": ["IdReview", "IdCliente", "IdProducto", "Fecha", "Rating"]
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "log_file": "etl_log.txt"
+  }
+}
