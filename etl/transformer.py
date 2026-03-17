@@ -18,6 +18,7 @@ _TIPOS = ["Regular", "Premium", "VIP"]
 
 random.seed(42)  # reproducible
 
+"""Los CSV no venían con estos datos pero la db debía poder responder esas preguntas"""
 
 class Transformer(ITransformer):
     """

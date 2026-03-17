@@ -1,13 +1,3 @@
-"""
-etl/extractor.py — Paso 1: Extracción de datos (implementa IExtractor)
-
-Aplica Clean Architecture:
-  - Implementa IExtractor (Dependency Inversion)
-  - Columnas requeridas leídas desde config.json (Single Responsibility)
-  - Reintentos configurables por fuente (Open/Closed)
-  - Stopwatch por archivo para métricas de rendimiento
-"""
-
 import os
 import time
 import pandas as pd
@@ -21,8 +11,7 @@ log = get_logger(__name__)
 class Extractor(IExtractor):
     """
     Extrae datos desde archivos CSV.
-    Implementa IExtractor — puede sustituirse por DatabaseExtractor
-    o ApiExtractor sin cambiar el resto del pipeline.
+    Implementa IExtractor
     """
 
     def __init__(self):

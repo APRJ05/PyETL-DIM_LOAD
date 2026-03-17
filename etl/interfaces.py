@@ -1,11 +1,3 @@
-"""
-etl/interfaces.py — Contratos abstractos del pipeline (Clean Architecture)
-
-Define las interfaces que cada componente del ETL debe implementar.
-Ninguna capa superior depende de implementaciones concretas,
-solo de estas abstracciones (Dependency Inversion Principle).
-"""
-
 from abc import ABC, abstractmethod
 import pandas as pd
 

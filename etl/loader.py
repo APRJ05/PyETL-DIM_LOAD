@@ -1,8 +1,3 @@
-"""
-etl/loader.py — Paso 3: Carga de datos en SQL Server
-Respeta el orden de inserción según las FK del modelo.
-"""
-
 import pandas as pd
 from etl.interfaces import ILoader
 from utils.db import get_connection
