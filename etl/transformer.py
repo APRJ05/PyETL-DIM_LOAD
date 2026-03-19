@@ -1,5 +1,5 @@
 """
-etl/transformer.py — Paso 2: Limpieza, normalización y validación (implementa ITransformer)
+Limpieza, normalización y validación (implementa ITransformer)
 """
 
 import random

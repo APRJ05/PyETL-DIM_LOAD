@@ -9,10 +9,6 @@ log = get_logger(__name__)
 
 
 class Extractor(IExtractor):
-    """
-    Extrae datos desde archivos CSV.
-    Implementa IExtractor
-    """
 
     def __init__(self):
         self.csv_dir  = config.CSV_DIR
@@ -50,7 +46,7 @@ class Extractor(IExtractor):
     def validate(self, data: dict[str, pd.DataFrame]) -> bool:
         """
         Verifica que cada DataFrame tenga las columnas mínimas requeridas
-        según config.json → extraction.expected_columns.
+        según config.json -> extraction.expected_columns.
         """
         ok = True
         for key, required_cols in self.expected.items():

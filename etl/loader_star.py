@@ -17,7 +17,7 @@ log = get_logger(__name__)
 
 class LoaderStar(IStarLoader):
     """
-    Pipeline OLTP → OLAP:
+    Pipeline OLTP -> OLAP:
         Lee de OpClientes:    Clientes, Producto, Categorias, Fuentes, Rating,
                               Survey, SocialComments, WebReviews
         Escribe en OpClientes_DW: DIM_Fecha, DIM_Cliente, DIM_Producto,

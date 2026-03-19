@@ -1,8 +1,5 @@
 """
-main.py — Orquestador del pipeline ETL (Clean Architecture)
-
-Coordina las 4 etapas del pipeline sin depender de implementaciones
-concretas — solo de las interfaces IExtractor, ITransformer, ILoader.
+main.py — Orquestador del pipeline ETL (Clean|Onion Architecture)
 
 Principios aplicados:
   - Dependency Inversion: main depende de interfaces, no de clases

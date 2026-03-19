@@ -36,10 +36,6 @@ class ITransformer(ABC):
     def run(self, raw: dict[str, pd.DataFrame]) -> dict[str, pd.DataFrame]:
         """
         Aplica limpieza, normalización y enriquecimiento.
-        Args:
-            raw: DataFrames crudos del extractor
-        Returns:
-            DataFrames limpios listos para carga
         """
         pass
 
