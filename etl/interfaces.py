@@ -3,10 +3,6 @@ import pandas as pd
 
 
 class IExtractor(ABC):
-    """
-    Contrato para cualquier extractor de datos.
-    Implementaciones: CsvExtractor, DatabaseExtractor, ApiExtractor.
-    """
 
     @abstractmethod
     def extract(self) -> dict[str, pd.DataFrame]:
