@@ -1,9 +1,3 @@
-"""
-etl/loader_star.py — Paso 4: Carga del modelo analítico (OLAP)
-Lee datos procesados de OpClientes (OLTP) y los carga en OpClientes_DW (OLAP).
-Debe ejecutarse DESPUÉS de loader.py.
-"""
-
 import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -16,13 +10,6 @@ log = get_logger(__name__)
 
 
 class LoaderStar(IStarLoader):
-    """
-    Pipeline OLTP -> OLAP:
-        Lee de OpClientes:    Clientes, Producto, Categorias, Fuentes, Rating,
-                              Survey, SocialComments, WebReviews
-        Escribe en OpClientes_DW: DIM_Fecha, DIM_Cliente, DIM_Producto,
-                                   DIM_Fuente, DIM_Rating, FACT_Opiniones
-    """
 
     def __init__(self):
         self.oltp = None   # conexión OpClientes

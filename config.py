@@ -1,8 +1,3 @@
-"""
-config.py — Carga centralizada de configuración desde config.json
-Single source of truth para todo el pipeline.
-"""
-
 import json
 import os
 

@@ -44,10 +44,7 @@ class Extractor(IExtractor):
     # ── IExtractor: validate ──────────────────────────────────
 
     def validate(self, data: dict[str, pd.DataFrame]) -> bool:
-        """
-        Verifica que cada DataFrame tenga las columnas mínimas requeridas
-        según config.json -> extraction.expected_columns.
-        """
+
         ok = True
         for key, required_cols in self.expected.items():
             if key not in data:
@@ -68,10 +65,7 @@ class Extractor(IExtractor):
     # ── Privados ──────────────────────────────────────────────
 
     def _leer_con_reintentos(self, key: str, path: str) -> pd.DataFrame:
-        """
-        Intenta leer el CSV hasta RETRY_ATTEMPTS veces antes de lanzar error.
-        Implementa resiliencia ante errores transitorios de I/O.
-        """
+
         ultimo_error = None
         for intento in range(1, self.retries + 1):
             try:
@@ -97,10 +91,7 @@ class Extractor(IExtractor):
     # ── Método run() para compatibilidad con pipeline ─────────
 
     def run(self) -> dict[str, pd.DataFrame]:
-        """
-        Punto de entrada principal: extrae y valida.
-        Lanza ValueError si la validación falla.
-        """
+
         data = self.extract()
         if not self.validate(data):
             raise ValueError(

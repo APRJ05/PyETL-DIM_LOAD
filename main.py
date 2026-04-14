@@ -1,13 +1,3 @@
-"""
-main.py — Orquestador del pipeline ETL (Clean|Onion Architecture)
-
-Principios aplicados:
-  - Dependency Inversion: main depende de interfaces, no de clases
-  - Single Responsibility: cada clase hace una sola cosa
-  - Configuración centralizada en config.json
-  - Métricas de rendimiento con Stopwatch y MetricsCollector
-"""
-
 import sys
 import os
 import time
@@ -25,7 +15,6 @@ metrics = MetricsCollector()
 
 
 def run_stage(name: str, fn):
-    """Ejecuta una etapa, mide tiempo y registra métricas."""
     t0 = time.perf_counter()
     try:
         result = fn()

@@ -1,7 +1,3 @@
-"""
-Limpieza, normalización y validación (implementa ITransformer)
-"""
-
 import random
 import pandas as pd
 from etl.interfaces import ITransformer
@@ -18,13 +14,8 @@ _TIPOS = ["Regular", "Premium", "VIP"]
 
 random.seed(42)  # reproducible
 
-"""Los CSV no venían con estos datos pero la db debía poder responder esas preguntas"""
-
 class Transformer(ITransformer):
-    """
-    Aplica limpieza y normalización a cada DataFrame.
-    Cada método privado maneja un dataset específico.
-    """
+
 
     def run(self, raw: dict[str, pd.DataFrame]) -> dict[str, pd.DataFrame]:
         log.info("=" * 55)

@@ -7,13 +7,6 @@ log = get_logger(__name__)
 
 
 class Loader(ILoader):
-    """
-    Carga los DataFrames transformados en las tablas de SQL Server.
-    Orden de inserción:
-        1. Categorias  2. Fuentes    3. Rating
-        4. Clientes    5. Producto   6. Comentarios
-        7. Survey      8. SocialComments  9. WebReviews
-    """
 
     def __init__(self):
         self.conn   = None
@@ -65,11 +58,7 @@ class Loader(ILoader):
 
     @staticmethod
     def _mapear_id(id_csv: int, id_map: dict) -> int | None:
-        """
-        Resuelve un ID del CSV al ID real en BD.
-        Si el ID no existe directamente (datos de prueba fuera de rango),
-        aplica módulo para ciclar dentro del rango válido disponible.
-        """
+
         if id_csv in id_map:
             return id_map[id_csv]
         keys = sorted(id_map.keys())
